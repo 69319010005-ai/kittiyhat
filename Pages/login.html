@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnterpriseOS | เข้าสู่ระบบองค์กร</title>
+    <!-- เชื่อมต่อ CSS ตามโครงสร้างโฟลเดอร์ปัจจุบัน -->
+    <link rel="stylesheet" href="../src/css/style.css">
+    <!-- ฟอนต์ Inter (อังกฤษ/ตัวเลข) คู่กับ Prompt (ภาษาไทยที่อ่านง่ายและทันสมัย) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="login-layout">
+        <!-- ฝั่งซ้าย: Branding & Glassmorphism Showcase -->
+        <section class="login-branding premium-bg">
+            <!-- แสงฟุ้งตกแต่งพื้นหลัง -->
+            <div class="ambient-orb orb-1"></div>
+            <div class="ambient-orb orb-2"></div>
+
+            <div class="branding-content">
+                <div class="brand-badge">
+                    <span class="badge-dot"></span>
+                    <span>ENTERPRISE CLOUD V2.4</span>
+                </div>
+
+                <div class="brand-logo">
+                    <div class="logo-box">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span>Enterprise<b>OS</b></span>
+                </div>
+
+                <h1 class="branding-title">ยกระดับธุรกิจ<br>สู่อนาคตดิจิทัล</h1>
+                <p class="branding-desc">แพลตฟอร์มจัดการทรัพยากรองค์กรแบบครบวงจร ผสานความปลอดภัยระดับสากลเข้ากับความรวดเร็วในการทำงาน</p>
+
+                <!-- การ์ดกระจกฝ้าแสดงจุดเด่นของระบบ -->
+                <div class="glass-feature-card">
+                    <div class="feature-icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <strong>ความปลอดภัยระดับ ISO-27001</strong>
+                        <span>เข้ารหัสข้อมูลแบบ End-to-End และรองรับระบบยืนยันตัวตน 2 ชั้น</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ฝั่งขวา: ฟอร์มล็อกอินแบบ Elevated Card -->
+        <section class="login-form-container">
+            <div class="form-card">
+                <!-- โลโก้สำหรับแสดงบนหน้าจอมือถือ (ซ่อนบนจอใหญ่) -->
+                <div class="mobile-brand">
+                    <div class="mobile-logo-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span>Enterprise<b>OS</b></span>
+                </div>
+
+                <div class="form-header">
+                    <h2>ยินดีต้อนรับกลับมา</h2>
+                    <p>กรุณาเข้าสู่ระบบด้วยบัญชีองค์กรของคุณ</p>
+                </div>
+
+                <form id="loginForm" class="enterprise-form" novalidate>
+                    <!-- ช่องกรอกอีเมล -->
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder=" ">
+                        <div class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <label for="email">อีเมลองค์กร</label>
+                        <span class="error-msg" id="emailError">กรุณากรอกรูปแบบอีเมลให้ถูกต้อง</span>
+                    </div>
+
+                    <!-- ช่องกรอกรหัสผ่าน -->
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" required autocomplete="current-password" placeholder=" ">
+                        <div class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <label for="password">รหัสผ่าน</label>
+                        <button type="button" id="togglePassword" class="toggle-password-btn" aria-label="แสดงหรือซ่อนรหัสผ่าน">
+                            <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="form-actions">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="remember" name="remember">
+                            <span class="checkmark"></span>
+                            จดจำการเข้าสู่ระบบ
+                        </label>
+                        <a href="#" class="forgot-link">ลืมรหัสผ่าน?</a>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn-primary">
+                        <span class="btn-text">เข้าสู่ระบบ</span>
+                        <div class="loader" id="btnLoader"></div>
+                    </button>
+                </form>
+
+                <!-- เส้นคั่นและปุ่ม Enterprise SSO -->
+                <div class="divider">
+                    <span>หรือเข้าสู่ระบบด้วย</span>
+                </div>
+
+                <div class="sso-grid">
+                    <button type="button" class="btn-sso" onclick="alert('เชื่อมต่อ Google Workspace SSO')">
+                        <svg width="18" height="18" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.14C3.26 21.3 7.31 24 12 24z"/>
+                            <path fill="#FBBC05" d="M5.28 14.24c-.24-.72-.38-1.49-.38-2.24s.14-1.52.38-2.24V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.99-3.14z"/>
+                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.99 3.14c.95-2.85 3.6-4.96 6.72-4.96z"/>
+                        </svg>
+                        <span>Google</span>
+                    </button>
+                    <button type="button" class="btn-sso" onclick="alert('เชื่อมต่อ Microsoft Entra ID SSO')">
+                        <svg width="18" height="18" viewBox="0 0 21 21">
+                            <rect x="1" y="1" width="9" height="9" fill="#f25022"/>
+                            <rect x="1" y="11" width="9" height="9" fill="#00a4ef"/>
+                            <rect x="11" y="1" width="9" height="9" fill="#7fba00"/>
+                            <rect x="11" y="11" width="9" height="9" fill="#ffb900"/>
+                        </svg>
+                        <span>Microsoft</span>
+                    </button>
+                </div>
+
+                <p class="form-footer">
+                    ติดปัญหาการเข้าใช้งาน? <a href="#">ติดต่อฝ่ายไอทีซัพพอร์ต</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="../src/js/app.js"></script>
+</body>
+</html>
